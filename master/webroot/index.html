@@ -241,7 +241,7 @@
                     dataType: 'json',
                     data: {name: jobName},
                     success: function(resp) {
-                        if (resp.errno != 0) {
+                        if (resp.code != 200) {
                             return
                         }
                         // 遍历日志
@@ -276,7 +276,7 @@
                     url: '/worker/list',
                     dataType: 'json',
                     success: function(resp) {
-                        if (resp.errno != 0) {
+                        if (resp.code != 200) {
                             return
                         }
 
@@ -302,7 +302,7 @@
                     url: '/job/list',
                     dataType: 'json',
                     success: function(resp) {
-                        if (resp.errno != 0) {  // 服务端出错了
+                        if (resp.code != 200) {  // 服务端出错了
                             return
                         }
                         // 任务数组
